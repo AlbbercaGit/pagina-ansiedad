@@ -10,7 +10,7 @@ const poppins = Roboto({
 
 export const metadata = {
   title: 'Ansiedad Caramelizada',
-  description: 'Sitio oficial de Ansiedad Caramelizada',
+  description: 'Sitio oficial de Ansiedad Caramelizadas',
 }
 
 export default function RootLayout({
