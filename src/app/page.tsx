@@ -22,13 +22,13 @@ export default function Page() {
     if (homeInView) setCurrentSection('home')
     else if (musicInView) setCurrentSection('music')
     else if (photosInView) setCurrentSection('photos')
-    else if (storeRef) setCurrentSection('store')
+    else if (storeInView) setCurrentSection('store')
   }, [homeInView, musicInView, photosInView, storeInView])
 
   return (
     <div className="min-h-screen flex flex-col relative">
       <AnimatePresence>
-        {(currentSection === 'home' ||  currentSection === 'photos') && (
+        {(currentSection === 'home' || currentSection === 'photos') && (
           <motion.div 
             className="fixed inset-0 z-0 flex items-center justify-center overflow-hidden"
             initial={{ opacity: 0 }}
@@ -36,7 +36,7 @@ export default function Page() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-[80%] h-[80%]">
+            <div className="top-[10%] w-[100%] h-[100%] relative">
               <Image 
                 src="/ansiedadcaramelizada-ep-cover.jpg"
                 alt="Background"
