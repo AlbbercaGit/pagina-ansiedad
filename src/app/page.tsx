@@ -8,7 +8,7 @@ import Navigation from './components/Navigation'
 import Home from './components/Home'
 import Music from './components/Music'
 import Photos from './components/Photos'
-import Store from './components/Store'
+// import Store from './components/Store'
 
 export default function Page() {
   const [currentSection, setCurrentSection] = useState('home')
@@ -16,14 +16,14 @@ export default function Page() {
   const [homeRef, homeInView] = useInView({ threshold: 0.5 })
   const [musicRef, musicInView] = useInView({ threshold: 0.5 })
   const [photosRef, photosInView] = useInView({ threshold: 0.5 })
-  const [storeRef, storeInView] = useInView({ threshold: 0.5 })
+  // const [storeRef, storeInView] = useInView({ threshold: 0.5 })
 
   useEffect(() => {
     if (homeInView) setCurrentSection('home')
     else if (musicInView) setCurrentSection('music')
     else if (photosInView) setCurrentSection('photos')
-    else if (storeInView) setCurrentSection('store')
-  }, [homeInView, musicInView, photosInView, storeInView])
+    // else if (storeInView) setCurrentSection('store')
+  }, [homeInView, musicInView, photosInView])
 
   return (
     <div className="min-h-screen flex flex-col relative">
