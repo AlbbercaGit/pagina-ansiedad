@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && next export && touch out/.nojekyll && git fetch origin gh-pages && git checkout gh-pages && git pull origin gh-pages && rm -rf * && cp -r out/* . && git add . && git commit -m 'New deploy' && git push origin gh-pages"
   },
   "dependencies": {
     "framer-motion": "^11.13.5",
